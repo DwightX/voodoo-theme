@@ -26,23 +26,27 @@ a {
     text-underline-offset: .1em;
 }
 
-/* Focus styles */
 :where(.wp-site-blocks *:focus) {
     outline-width: 2px;
     outline-style: solid;
 }
 
-/*
- * Progressive enhancement to reduce widows and orphans
- * https://github.com/WordPress/gutenberg/issues/55190
- */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+caption,
+figcaption,
+p {
     text-wrap: pretty;
 }
 
 /* ==========================================================================
-   Layout Styles
-   ========================================================================== */
+      Layout Styles
+      ========================================================================== */
 .is-layout-flex {
     display: flex;
     justify-content: space-between;
@@ -53,10 +57,10 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 }
 
 /* ==========================================================================
-   Header Styles
-   ========================================================================== */
+      Header Styles
+      ========================================================================== */
 header {
-    background: #151515 url("https://i.ibb.co/tpRDPP46/header-bg.webp") no-repeat center 0 / cover;
+    background: #151515 url("https://i.ibb.co/tpRDPP46/header-bg.webp") no-repeat center 0/cover;
     background-size: auto 580px;
     padding: 0 0 15px;
     position: relative;
@@ -92,8 +96,8 @@ header .logo {
 }
 
 /* ==========================================================================
-   Navigation Styles
-   ========================================================================== */
+      Navigation Styles
+      ========================================================================== */
 .main-nav {
     font-size: 0;
     margin: 0 0 10px;
@@ -102,7 +106,7 @@ header .logo {
 }
 
 .main-nav ul li {
-    padding: 0px 16px;
+    padding: 0 16px;
 }
 
 .main-nav ul li a {
@@ -113,7 +117,6 @@ header .logo {
     text-transform: capitalize;
 }
 
-/* Mega Menu Styles */
 #mega-menu-wrap-max_mega_menu_1 {
     width: 1360px;
     clear: both;
@@ -122,12 +125,12 @@ header .logo {
 
 #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 {
     text-align: center;
-    padding: 0px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
 }
 
-#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item>a.mega-menu-link {
     display: block;
     font-size: 18px;
     font-weight: 700;
@@ -149,7 +152,6 @@ header .logo {
     justify-content: center;
 }
 
-/* Navigation Block Styles */
 .wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
     margin-bottom: 3px;
 }
@@ -171,8 +173,8 @@ header .logo {
 }
 
 /* ==========================================================================
-   Typography Styles
-   ========================================================================== */
+      Typography Styles
+      ========================================================================== */
 .top-banner-text {
     color: #e9e6e6;
     font-size: 16px;
@@ -213,8 +215,8 @@ header .logo {
 }
 
 /* ==========================================================================
-   Button Styles
-   ========================================================================== */
+      Button Styles
+      ========================================================================== */
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -244,22 +246,21 @@ header .logo {
     color: #793330;
 }
 
-.wp-block-column{
-	word-break: keep-all;
-	overflow-wrap: normal;
-	display: flex;
+.wp-block-column {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* More Link */
 .more-link {
     display: block;
 }
 
 /* ==========================================================================
-   Component Styles
-   ========================================================================== */
+      Component Styles
+      ========================================================================== */
 .cta-row {
     gap: 5px;
 }
@@ -267,6 +268,7 @@ header .logo {
 :root :where(.wp-block-button.is-style-outline--2 .wp-block-button__link.wp-block-button__link:not(.has-background):hover) {
     background-color: transparent;
 }
+
 header:after {
     background: transparent url("http://dc-voodoo-header-assessment.local/wp-content/uploads/2025/05/header-curve.webp") no-repeat center 0;
     content: '\0A0';
@@ -275,59 +277,61 @@ header:after {
     position: absolute;
     right: 0;
 }
-    header:after {
-        background-size: cover;
-    }
+
+header:after {
+    background-size: cover;
+}
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media (max-width: 668px) {
- .middle-header {
-    gap: 20%;
-}
-	.top-header{
-		    padding: 10px 20px;
-	}
-	.sub-title{
-		    padding-top: 15px;
-	}
-	:root :where(.wp-block-buttons-is-layout-flex) {
-    gap: 5px;
-}
-}
-@media (min-width: 768px) {
-	:root :where(.wp-block-buttons-is-layout-flex) {
-    gap: 5px;
-}
-
-    header {
-        /* background-size: auto 510px; */
+      Media Queries
+      ========================================================================== */
+@media (max-width:668px) {
+    .middle-header {
+        gap: 20%;
     }
-    
+
+    .top-header {
+        padding: 10px 20px;
+    }
+
+    .sub-title {
+        padding-top: 15px;
+    }
+
+    :root :where(.wp-block-buttons-is-layout-flex) {
+        gap: 5px;
+    }
+}
+
+@media (min-width:768px) {
+    :root :where(.wp-block-buttons-is-layout-flex) {
+        gap: 5px;
+    }
+
+    header {}
+
     .top-header {
         padding-bottom: 40px;
     }
-    
+
     header .logo {
         margin: 0;
         max-width: 208px;
     }
-    
+
     .middle-wrapper {
         padding: 0 0 50px;
     }
-    
+
     .banner-top-text {
         font-size: 48px;
     }
-    
+
     .banner-bottom-text {
         font-size: 140px;
         line-height: 100px;
     }
-    
+
     .cta-buttons {
         flex-direction: row !important;
         display: flex;
@@ -335,20 +339,20 @@ header:after {
         max-width: inherit;
         padding: 0 50px 15px;
     }
-    
+
     .sub-title {
         font-size: 18px;
         letter-spacing: 4px;
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width:960px) {
     header {
         background-position: center 0;
         background-size: cover;
     }
-    
-    .menu-container > li > a {
+
+    .menu-container>li>a {
         color: #793330;
         display: block;
         font-size: 18px;
@@ -361,22 +365,22 @@ header:after {
     }
 }
 
-@media (max-width: 959px) {
+@media (max-width:959px) {
     #mega-menu-wrap-max_mega_menu_1 {
         display: none;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .banner-top-text {
         letter-spacing: 1.25px;
         line-height: 72px;
         padding: 0 0 5px;
-		font-size: 90px;
+        font-size: 90px;
     }
-    
+
     .banner-bottom-text {
         font-size: 200px;
-		line-height:150px;
+        line-height: 150px;
     }
 }
